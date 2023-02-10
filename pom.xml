@@ -1,0 +1,70 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>DBMatch</groupId>
+  <artifactId>DBMatch</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>DBMatch</name>
+
+	<properties>
+		<license.licenseName>bsd_2</license.licenseName>
+		<main-class>DBTest</main-class>
+	</properties>
+
+
+	<dependencies>
+		<dependency>
+			<groupId>net.sf.sociaal</groupId>
+			<artifactId>freetts</artifactId>
+			<version>1.2.2</version>
+		</dependency>
+		<dependency>
+			<groupId>com.github.axet</groupId>
+			<artifactId>TarsosDSP</artifactId>
+			<version>2.4</version>
+		</dependency>
+		<dependency>
+		    <groupId>com.google.guava</groupId>
+		    <artifactId>guava</artifactId>
+		    <version>27.0.1-jre</version>
+		</dependency>
+		<dependency>
+		  <groupId>edu.cmu.sphinx</groupId>
+		  <artifactId>sphinx4-core</artifactId>
+		  <version>5prealpha-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+	  <plugins>
+	    <plugin>
+	      <!-- Build an executable JAR -->
+	      <groupId>DBMatch</groupId>
+	      <artifactId>DBMatch</artifactId>
+	      <version>0.0.1-SNAPSHOT</version>
+	      <configuration>
+	        <archive>
+	          <manifest>
+	            <addClasspath>true</addClasspath>
+	            <classpathPrefix>lib/</classpathPrefix>
+	            <mainClass>DBTest</mainClass>
+	          </manifest>
+	        </archive>
+	      </configuration>
+	    </plugin>
+	  </plugins>
+	</build>
+	<repositories>
+        <repository>
+            <id>snapshots-repo</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+
+</project>
